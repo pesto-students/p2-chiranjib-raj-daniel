@@ -1,0 +1,124 @@
+* {
+    font-family: lato;
+}
+body{
+    position: relative;
+}
+header{
+    background-color: rgb(69, 69, 69);
+    position: relative;
+    height:350px;
+    top: 0px;
+    left: 50px;
+    right: 0px;
+}
+#img1{
+    position: absolute;
+    left: 50px;
+    top:50px;
+    bottom:30px;
+}
+
+#heading{
+    position: absolute;
+    left: 400px;
+    top: 40px;
+}
+
+#line1{
+    position: absolute;
+    left: 400px;
+    top: 100px;
+}
+
+#line2{
+    position: absolute;
+    left: 400px;
+    top: 120px;
+}
+#bottom-option{
+    position: absolute;
+    left: 400px;
+    top: 270px; 
+}
+nav{
+    display: inline-block;
+    position: fixed;
+    background-color: rgb(241, 240, 240);
+    width: 50px;
+    height: 100%;
+    top:0%
+}
+table{
+    position: absolute;
+    left: 70px;
+    right: 0px;
+    top: 450px;
+}
+
+footer{
+    background-color: rgb(67, 104, 155);
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    bottom: 0%;
+}
+
+.header{
+    color: white;
+    font-size: 16px;
+}
+
+.footer{
+    color: white;
+    font-size: 16px;
+}
+
+#nav{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 70px;
+}
+
+#img2{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+}
+#line3{
+    position: absolute;
+    left: 150px;
+    top: 20px;
+
+}
+
+#line4{
+    position: absolute;
+    left: 150px;
+    top:40px;
+
+}
+
+#player-option{
+    position: relative;
+    left: 300px;
+    bottom: 40px;
+    padding-right: 250px;
+}
+
+td{
+    padding-right: 250px;
+    padding-bottom: 20px;
+}
+
+#greyColor{
+    background-color: rgb(241, 240, 240);
+}
+
+#externalBorder{
+   border: 2px solid black;
+   text-indent: 45px;
+   color: blue;
+   padding-right: 65px;
+}
