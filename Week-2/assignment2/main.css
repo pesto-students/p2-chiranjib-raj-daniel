@@ -5,13 +5,16 @@
     border: 2px solid blue;
     left: 100px;
     top: 200px;
+
 }
 
 #top-left{
-    position: relative;
+    position: absolute;
     width: 100px;
     height:100px;
     background-color: red;
+    transition-duration: 1s;
+    transform-origin: top left;
 
 }
 
@@ -20,8 +23,10 @@
     width: 100px;
     height:100px;
     left: 100px;
-    top: 100px;
+    top: 0;
     background-color: yellow;
+    transition-duration: 1s;
+    transform-origin: top right;
 }
 
 #bottom-left{
@@ -30,6 +35,8 @@
     height:100px;
     top: 100px;
     background-color: blue;
+    transition-duration: 1s;
+    transform-origin: bottom left;
 }
 
 #bottom-right{
@@ -37,14 +44,32 @@
     width: 100px;
     height:100px;
     left: 100px;
+    top: 100px;
     background-color: green;
+    transition-duration: 1s;
+    transform-origin: bottom right;
 }
 
 #text{
+    position: relative;
     text-align: center;
+    top: 100px;
+    z-index: 0;
+    
 }
 
-#top-left:hover{
+.container:hover #top-left{
     transform: rotate(90deg);
+}
 
+.container:hover #top-right{
+    transform: rotate(-90deg);
+}
+
+.container:hover #bottom-left{
+    transform: rotate(-90deg);
+}
+
+.container:hover #bottom-right{
+    transform: rotate(90deg);
 }
