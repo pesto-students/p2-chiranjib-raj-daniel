@@ -1,0 +1,50 @@
+.container{
+    position: relative;;
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    left: 100px;
+    top: 200px;
+}
+
+#top-left{
+    position: relative;
+    width: 100px;
+    height:100px;
+    background-color: red;
+
+}
+
+#top-right{
+    position: absolute;
+    width: 100px;
+    height:100px;
+    left: 100px;
+    top: 100px;
+    background-color: yellow;
+}
+
+#bottom-left{
+    position: absolute;
+    width: 100px;
+    height:100px;
+    top: 100px;
+    background-color: blue;
+}
+
+#bottom-right{
+    position: absolute;
+    width: 100px;
+    height:100px;
+    left: 100px;
+    background-color: green;
+}
+
+#text{
+    text-align: center;
+}
+
+#top-left:hover{
+    transform: rotate(90deg);
+
+}
