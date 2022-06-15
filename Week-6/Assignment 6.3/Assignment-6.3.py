@@ -5,7 +5,6 @@ countOfZero = 0
 countOfOne = 0
 countOfTwo = 0
 
-
 for value in unsortedArrray:
     if value ==0:
         countOfZero +=1
@@ -20,6 +19,5 @@ sortedArray += [1] * countOfOne
 sortedArray += [2] * countOfTwo
 
 print(sortedArray)
-
 
 # the above algo is brute force algo and takes O(n) in time complexity and O(n) in space complexity
