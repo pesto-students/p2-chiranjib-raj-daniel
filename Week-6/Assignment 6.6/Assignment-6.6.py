@@ -17,3 +17,6 @@ def sumOfClosest(arr,target):
     return sumMap[closestKey]
 
 print(sumOfClosest([-1, 2, 1, -4], 1))
+
+# Time complexity O(n)
+# Space complexity O(1)
