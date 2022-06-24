@@ -18,7 +18,7 @@ def parenthesisChecker(arr):
                 return False
     return True 
 
-print(parenthesisChecker(list("{[}]()"))) .  # passing the string into list(array)
+print(parenthesisChecker(list("{[}]()")))  # passing the string into list(array)
 
 
 
