@@ -1,26 +1,3 @@
-
-# def parenthesisChecker(arr):
-#     charStack = []
-#     openTags = ["(","[","{"]
-#     closeTags = [")","]","}"]
-
-#     for value in range(len(arr)):
-#         if arr[value]  in openTags:
-#             print(value)
-#             charStack.append(arr[value])
-#         elif arr[value]  in closeTags:
-#             print(value)
-#             checkTag=charStack.pop()
-#             if ord(checkTag) != ord(arr[value]) - 1 or  ord(arr[value]) - 2:
-#                 return False
-#             elif ord(checkTag) != ord(arr[value]) - 2:
-#                 return False
-#     return True 
-
-# print(parenthesisChecker(list("{}[]()")))
-
-
-
 def parenthesisChecker(arr):
     charStack = []                   #empty arrray to store the opening characters
     openTags = ["(","[","{"]         # opening comparison characters
