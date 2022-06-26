@@ -1,3 +1,5 @@
+# implementing rotation of linkelist
+
 
 # the below implementation was allready solved in instructor class so solving with python and following same method as taught in instructor class
 
@@ -19,32 +21,41 @@ class LinkedList:
             current.next = Node(arr[i])
             current = current.next
 
-    # Function to reverse the linked list
-    def reverse(self):
-        prev = None
-        current = self.head
-        while(current is not None):
-            next = current.next
-            current.next = prev
-            prev = current
-            current = next
-        self.head = prev
-
-    # Function to insert a new node at the beginning
-    def push(self, new_data):
-        new_node = Node(new_data)
-        new_node.next = self.head
-        self.head = new_node
-
     # Utility function to print the LinkedList
     def printList(self):
         temp = self.head
         while(temp):
             print (temp.data,end=" ")
             temp = temp.next
+            
+    def rotate(self, k):
+        if k == 0: 
+            return 
+
+        current = self.head
+        count = 1 
+        while(count <k and current is not None):
+            current = current.next
+            count += 1
+
+        if current is None:
+            return
+
+        kthNode = current 
+
+        while(current.next is not None):
+            current = current.next
+
+        current.next = self.head
+        self.head = kthNode.next
+        kthNode.next = None
+
+
+
+
 
 linklist = LinkedList()
 linklist.createLS([77,12,3,5,34,65,89])
 # linklist.printList()
-linklist.reverse()
+linklist.rotate(4)
 linklist.printList()
