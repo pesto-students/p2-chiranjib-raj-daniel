@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "965f8f67-7158-4231-84f8-6da4cd8d3fa0",
+		"name": "Wealth Portfolio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20765097"
+	},
+	"item": [
+		{
+			"name": "Login & signup",
+			"item": [
+				{
+					"name": "Signup user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Daniel Raj\",\n    \"email\":\"user@email.com\",\n    \"password\":\"minlengthpassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/v1/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@email.com\",\n    \"password\":\"minlengthpassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Finance",
+			"item": [
+				{
+					"name": "add",
+					"item": [
+						{
+							"name": "Add income",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"salary\",\n    \"amount\":1500000,\n    \"year\": 2022,\n    \"month\": \"october\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/income/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"income",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add expense",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"rent\",\n    \"amount\":15000,\n    \"year\": 2022,\n    \"month\": \"september\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/expense/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"expense",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add savings",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":100000,\n    \"year\": 2022,\n    \"month\": \"september\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/savings/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"savings",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get all finance",
+					"item": [
+						{
+							"name": "get finance by month",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/api/v1/finance/:year?month=september",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"finance",
+										":year"
+									],
+									"query": [
+										{
+											"key": "month",
+											"value": "september"
+										}
+									],
+									"variable": [
+										{
+											"key": "year",
+											"value": "2022"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get finance by year",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/api/v1/finance/:year",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"finance",
+										":year"
+									],
+									"variable": [
+										{
+											"key": "year",
+											"value": "2022"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "update income",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":400000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/income/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"income",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6317004d171dbef540289e7c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update savings",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":300000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/savings/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"savings",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6316f52ed7a7e6c26d2c6c0b"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update expense",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTY1YWQ3ZGQ1ZmNkMzkzYjZlNjM0OSIsImlhdCI6MTY2MjQ0NzcyMiwiZXhwIjoxNjcwMjIzNzIyfQ.oZ27qk3ek9QqP0jjMpxUaWZY-mmizFa9g3lZyqNZLEk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":40000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/expense/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"expense",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6316f4f6d7a7e6c26d2c6c08"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
