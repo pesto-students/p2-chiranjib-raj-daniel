@@ -1,5 +1,5 @@
 const User = require("./../model/userModal");
-const {promisify}  = require('utils')
+const { promisify } = require("util");
 const jwt = require("jsonwebtoken");
 
 const createToken = (id) => {
@@ -30,44 +30,44 @@ exports.login = async (req, res, next) => {
     const { email, password } = req.body;
     if (!email || !password) {
         res.status(400).json({
-            status: fail,
+            status: 'fail',
             message: "provide email and password",
         });
     }
 
     const user = await User.findOne({ email }).select("+password");
-    if(!user || !(await user.correctPassword(password, user.password))){
-        res.status(400).json(
-            {
-                status: fail,
-                message: 'user does not exist or incorrect password'
-            }
-        )
+    if (!user || !(await user.correctPassword(password, user.password))) {
+        res.status(400).json({
+            status: 'fail',
+            message: "user does not exist or incorrect password",
+        });
     }
     const token = createToken(user._id);
 
     res.status(200).json({
-        status: success,
+        status: 'success',
         token,
     });
 };
 
-exports.userAuth = async (req,res,next)=>{
-    let token
-    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
-        token = req.headers.authorization.split(' ')[1];
-
+exports.userAuth = async (req, res, next) => {
+    let token;
+    if (
+        req.headers.authorization &&
+        req.headers.authorization.startsWith("Bearer")
+    ) {
+        token = req.headers.authorization.split(" ")[1];
     }
-    const decoded = await promisify(jwt.verify)(token,process.env.JWT_SECRET)
-    const currentUser = await User.findById(decoded.id)
+    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+    const currentUser = await User.findById(decoded.id);
 
-    if(!currentUser){
+    if (!currentUser) {
         res.status(400).json({
-            status: fail,
-            message: 'user with this token does not exist'
-        })
+            status: 'fail',
+            message: "user with this token does not exist",
+        });
     }
 
-    req.user = currentUser
-    next()
-}
+    req.user = currentUser;
+    next();
+};
