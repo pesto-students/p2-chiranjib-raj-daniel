@@ -1,0 +1,2 @@
+week 10 assignment is hosted on netlify
+link to the site : https://adorable-conkies-364ec6.netlify.app/
